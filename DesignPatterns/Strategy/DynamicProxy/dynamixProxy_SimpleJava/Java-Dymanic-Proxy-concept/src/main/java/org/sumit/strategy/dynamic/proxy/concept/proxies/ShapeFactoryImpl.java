@@ -20,6 +20,6 @@ public class ShapeFactoryImpl implements ShapeFactory {
 
     @Override
     public Shape getShapeInstance(ShapesType shapesType) {
-        return (Shape) ShapesDynamicFactory.createObject(map.get(shapesType));
+        return (Shape) new ShapesDynamicFactory().createObject(map.get(shapesType));
     }
 }
